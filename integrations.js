@@ -1,6 +1,6 @@
 (() => {
   const CONFIG = {
-        googleAppsScriptUrl: "https://script.google.com/macros/s/AKfycbzRSW-ZSAHgnY_62YI3zcclxPF_Nj3yLJzl9Pvc7MyH1glemCbyUP9hv1T0fkCt4mN4/exec",
+        googleAppsScriptUrl: "https://script.google.com/macros/s/AKfycbxwoWj2BSY7hXsoN3DX76jCug9cXUyJ7mNfPB1yJU6_E_IdcLy93khoLlwXgyGy7aCOkg/exec",
     whatsappNumber: "971564692102"
   };
   const responseOrigin = "https://script.googleusercontent.com";
