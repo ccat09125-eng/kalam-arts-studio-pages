@@ -1,0 +1,13 @@
+.env
+.env.*
+!.env.example
+__pycache__/
+node_modules/
+instance/
+*.db
+*.sqlite
+*.sqlite3
+*.zip
+/static-site-preview/
+/static-site-preview.zip
+static/uploads/
