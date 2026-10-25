@@ -3,7 +3,18 @@
         googleAppsScriptUrl: "https://script.google.com/macros/s/AKfycbxwoWj2BSY7hXsoN3DX76jCug9cXUyJ7mNfPB1yJU6_E_IdcLy93khoLlwXgyGy7aCOkg/exec",
     whatsappNumber: "971564692102"
   };
-  const responseOrigin = "https://script.googleusercontent.com";
+  function isGoogleResponseOrigin(origin) {
+    try {
+      const url = new URL(origin);
+      return url.protocol === "https:" && (
+        url.hostname === "script.google.com" ||
+        url.hostname === "script.googleusercontent.com" ||
+        url.hostname.endsWith(".googleusercontent.com")
+      );
+    } catch {
+      return false;
+    }
+  }
   const pendingSubmissions = new Map();
   let frame;
 
@@ -98,7 +109,7 @@
   }
 
   window.addEventListener("message", (event) => {
-    if (event.origin !== responseOrigin || !event.data || event.data.type !== "KALAM_ENQUIRY_RESULT") return;
+    if (!isGoogleResponseOrigin(event.origin) || !event.data || event.data.type !== "KALAM_ENQUIRY_RESULT") return;
     const pending = pendingSubmissions.get(event.data.requestId);
     if (!pending || event.source !== frame?.contentWindow) return;
     pendingSubmissions.delete(event.data.requestId);
