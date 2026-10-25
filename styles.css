@@ -675,3 +675,29 @@ h1 em, h2 em { color: var(--accent); font-weight: 400; }
   *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
   .reveal { opacity: 1; transform: none; }
 }
+
+/* Enquiry form conversion improvements */
+.landing-enquiry-form { gap: 20px; }
+.landing-form-intro { padding: 15px 16px; border: 1px solid #ffffff25; background: #ffffff08; }
+.landing-form-step { display: block; color: #f2d46d; font-size: 10px; font-weight: 700; letter-spacing: .14em; }
+.landing-form-intro p { margin: 7px 0 0; color: #d1cec5; font-size: 12px; line-height: 1.5; }
+.landing-enquiry-form label { gap: 8px; color: #f5f2ea; font-size: 12px; line-height: 1.4; }
+.landing-required { margin-left: 5px; color: #f2d46d; font-size: 9px; font-weight: 600; letter-spacing: .03em; }
+.landing-enquiry-form input:not([type="hidden"]), .landing-enquiry-form select, .landing-enquiry-form textarea { padding: 13px 12px; border: 1px solid #ffffff30; border-radius: 3px; color: #fffdf7; background: #ffffff08; font: inherit; font-size: 14px; line-height: 1.4; }
+.landing-enquiry-form input::placeholder, .landing-enquiry-form textarea::placeholder { color: #bcb9b0; opacity: 1; }
+.landing-enquiry-form select { color-scheme: dark; }
+.landing-enquiry-form select option { color: #20201c; background: #fffdf7; }
+.landing-enquiry-form textarea { min-height: 105px; resize: vertical; }
+.landing-enquiry-form input:focus-visible, .landing-enquiry-form select:focus-visible, .landing-enquiry-form textarea:focus-visible { outline: 2px solid #f2d46d; outline-offset: 2px; border-color: #f2d46d; }
+.landing-form-row { gap: 14px; }
+.landing-optional { margin-left: 5px; color: #c8c6bf; font-size: 9px; letter-spacing: .03em; }
+.landing-form-note { color: #c8c6bf; font-size: 11px; line-height: 1.6; }
+.landing-submit-button { width: 100%; justify-content: space-between; min-height: 52px; padding: 15px 18px; font-size: 13px; }
+.landing-submit-button:disabled { cursor: wait; opacity: .65; }
+.landing-form-status { min-height: 16px; color: #f2d46d; font-size: 11px; line-height: 1.6; }
+@media (max-width: 600px) {
+  .landing-form-row { grid-template-columns: 1fr; gap: 18px; }
+  .landing-enquiry-form { gap: 18px; }
+  .landing-enquiry-form input:not([type="hidden"]), .landing-enquiry-form select, .landing-enquiry-form textarea { min-height: 48px; font-size: 16px; }
+  .landing-enquiry-form textarea { min-height: 110px; }
+}
