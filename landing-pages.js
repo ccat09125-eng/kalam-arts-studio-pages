@@ -68,7 +68,24 @@ function categoryGrid() {
 }
 
 function customForm() {
-  return `<form class="landing-enquiry-form" id="landing-enquiry-form"><div class="landing-form-row"><label>Your name<input name="name" autocomplete="name" required placeholder="Name"></label><label>Email or WhatsApp<input name="contact" required placeholder="How can we reach you?"></label></div><div class="landing-form-row"><label>Type of project<select name="type" required><option value="">Choose one</option><option>Painting or canvas art</option><option>Calligraphy or Islamic art</option><option>Handmade craft</option><option>3D art or sculpture</option><option>Personalized gift</option><option>Home or interior art</option><option>Mural or wall art</option><option>Workshop or creative project</option><option>Branding or design</option><option>Other</option></select></label><label>Preferred contact<select name="method" required><option value="">Choose one</option><option>WhatsApp</option><option>Email</option><option>Phone call</option></select></label></div><label>Tell us about the idea<textarea name="brief" rows="4" required placeholder="The idea, the space, the feeling..."></textarea></label><div class="landing-form-row"><label>Preferred dimensions<input name="dimensions" placeholder="Optional"></label><label>Required date<input name="date" type="date" required></label></div><label>Budget range <span class="landing-optional">OPTIONAL</span><select name="budget"><option value="">Prefer to discuss</option><option>Under AED 500</option><option>AED 500–1,500</option><option>AED 1,500–5,000</option><option>AED 5,000+</option><option>Not sure yet</option></select></label><label class="landing-consent-label"><input name="consent" type="checkbox" value="yes" required><span>I agree to share these details with KALAM ARTS STUDIO, including storage in its Google Sheet, so the team can reply.</span></label><p class="landing-form-note">When connected, the studio receives this in its Google Sheet and Gmail. Until setup is complete, use the WhatsApp contact link.</p><button class="button button-dark" type="submit">Send enquiry <span aria-hidden="true">↗</span></button><p class="landing-form-status" id="landing-form-status" role="status" aria-live="polite"></p></form>`;
+  return `<form class="landing-enquiry-form" id="landing-enquiry-form">
+    <div class="landing-form-intro"><span class="landing-form-step">YOUR PROJECT · 1 MINUTE</span><p>Just the essentials. We’ll follow up to discuss the details.</p></div>
+    <div class="landing-form-row">
+      <label for="enquiry-name">Your name <span class="landing-required">Required</span><input id="enquiry-name" name="name" autocomplete="name" required placeholder="e.g. Anan"></label>
+      <label for="enquiry-contact">WhatsApp or email <span class="landing-required">Required</span><input id="enquiry-contact" name="contact" autocomplete="email" required placeholder="Number or email address"></label>
+    </div>
+    <label for="enquiry-type">What can we create for you? <span class="landing-required">Required</span><select id="enquiry-type" name="type" required><option value="">Choose a project type</option><option>Painting or canvas art</option><option>Calligraphy or Islamic art</option><option>Handmade craft</option><option>3D art or sculpture</option><option>Personalized gift</option><option>Home or interior art</option><option>Mural or wall art</option><option>Workshop or creative project</option><option>Branding or design</option><option>Other / not sure yet</option></select></label>
+    <input type="hidden" name="method" value="WhatsApp">
+    <label for="enquiry-brief">Tell us your idea <span class="landing-required">Required</span><textarea id="enquiry-brief" name="brief" rows="3" required placeholder="What do you have in mind? A gift, artwork, size, colours or occasion…"></textarea></label>
+    <div class="landing-form-row">
+      <label for="enquiry-dimensions">Approx. size <span class="landing-optional">Optional</span><input id="enquiry-dimensions" name="dimensions" placeholder="e.g. 60 × 90 cm"></label>
+      <label for="enquiry-date">When do you need it? <span class="landing-optional">Optional</span><input id="enquiry-date" name="date" type="date"></label>
+    </div>
+    <label for="enquiry-budget">Budget range <span class="landing-optional">Optional</span><select id="enquiry-budget" name="budget"><option value="">Prefer to discuss</option><option>Under AED 500</option><option>AED 500–1,500</option><option>AED 1,500–5,000</option><option>AED 5,000+</option></select></label>
+    <p class="landing-form-note">We’ll use these details to respond to your enquiry. Your enquiry may be stored in the studio’s Google Sheet so the team can follow up. No marketing subscription.</p>
+    <button class="button button-dark landing-submit-button" type="submit">Send my project enquiry <span aria-hidden="true">↗</span></button>
+    <p class="landing-form-status" id="landing-form-status" role="status" aria-live="polite"></p>
+  </form>`;
 }
 
 function shopContent() {
